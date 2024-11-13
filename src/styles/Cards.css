@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway: 400,700,900");
+@import url("https://fonts.googleapis.con/icon?family=Material+Icons");
+@import url("https://meyerweb.con/eric/tools/css/reset/reset.css");
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #041c32;
+    height: 100vh;
+    
+  }
+  
+  .slider {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 20px;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 43s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+
+    height: 50px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+/* Estilos para los textos adicionales */
+.percentage-text {
+  position: absolute;
+  left: 85%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+}
+  .cards-container {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 100px;
+    
+  }
+  .cards-container h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  .card-body{
+    text-align: center;
+    margin: 30px;
+  }
+  .cards-container .owl-stage-outer {
+    padding: 30px 0;
+  }
+  .cards-container .owl-nav {
+    display: none;
+  }
+  .cards-container .owl-dots {
+    text-align: center;
+  }
+  .cards-container .owl-dots span {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: block;
+    background: #fff;
+    border: 2px solid #01b0f8;
+    margin: 0 5px;
+  }
+  .cards-container .owl-dots .active {
+    box-shadow: none;
+  }
+  .cards-container .owl-dots .active span {
+    background: #01b0f8;
+    box-shadow: none;
+    height: 12px;
+    width: 12px;
+    margin-bottom: -1px;
+  }
+  .cards-container .card {
+    background: #fff;
+    box-shadow: 0 8px 30px -7px #c9dff0;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+  }
+  .cards-container .card .card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #95abbb;
+    width: 100px;
+    height: 100px;
+  }
+  .cards-container .card h5 {
+    color: #01b0f8;
+    font-size: 21px;
+    line-height: 1.3;
+  }
+  .cards-container .card h5 span {
+    font-size: 18px;
+    color: #666;
+  }
+  .cards-container .card p {
+    font-size: 14px;
+    color: #555;
+    padding-bottom: 15px;
+  }
+  .cards-container .active {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+  .cards-container .center {
+    opacity: 1;
+  }
+  .cards-container .center h5 {
+    font-size: 27px;
+  }
+  .cards-container .center h5 span {
+    font-size: 20px;
+  }
+  .cards-container .center .card-img-top {
+    max-width: 100%;
+    height: 120px;
+    width: 120px;
+  }
+  @media (max-width: 767px) {
+    .cards-container {
+      margin-top: 20px;
+   }
+  }
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    outline: 0;
+  }
+  .owl-carousel button.owl-dot {
+    outline: 0;
+  }
+  /* foteer */
+  .contactos{
+    width: 100%;
+    height: 250px;
+    background-color:  #ffffff;
+    margin-top: 150px;
+  
+}
+.iconos{
+  font-size: 40px;
+  padding-left: 50%;
+
+}
+.iconos p{
+  font-size: 15px;
+  padding-top: 39px;
+}
+.iconos h1{
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.ins:hover{
+  transform: scale(1.5);
+  color:#ee389c
+}
+.wsp:hover{
+  transform: scale(1.5);
+  color:#10c437
+}
+
+.card_text-center{
+position: relative;
+}
+span{
+  color: rgb(0, 0, 0);
+}
+li{
+  color: rgb(0, 0, 0);
+  color: inherit;
+  text-decoration: none;
+}  
+h3{
+  color: #000000;
+  font-size:0.7em;
+  letter-spacing:1.2px;
+}
+img{
+  max-width: 100%;
+  filter: drop-shadow(1px 1px 3px #a6a6a6);
+}
+.product{
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  margin:auto ;
+  padding: 2.5em 0;
+  min-width: 600px;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+}
+.product-photo{
+  position: relative;
+}
+.photo-container {
+  position: absolute;
+  left: -2.5em;
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100%;
+  min-height: 100%; /* Fixed the typo here */
+  border-radius: 6px;
+  box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+.photo-main{
+  border-radius: 6px 6px 6 6 ;
+  background-color: #95abbb;
+  background: radial-gradient(#c9dff0,#a6a6a6);
+} 
+
+
+
+.photo-main .controls{
+  color:#fff; 
+  display: flex;
+  justify-content:space-between ;
+  padding: 0.8em;
+}
+.photo-main .controls i{
+  cursor:pointer;
+}
+.photo-main img{
+  position:relative; 
+  top:2em;
+  max-width: 110%;
+  filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px #000);
+}
+.photo-album{
+  padding: 0.7em 1em;
+  border-radius: 0 0 6px 6px;
+
+}
+.photo-album ul{
+  display: flex;
+  justify-content: space-around;
+}
+.photo-album li {
+ 
+  width: 55px;
+  height: 55px;
+  padding: 7px;
+
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  align-items: center; /* Added */
+}
+.product-info{
+  padding: 0.8em 0;
+}
+.tittle h1{
+  color:#000000;
+  margin-bottom: 0.1em;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.title span{
+  color:#000000;
+  font-size: 0.7em;
+}
+.price{
+  color: #ff3f40;
+  margin: 1.5em 0;
+  font-size: 1.2em;
+}
+.price span{
+  padding-left: 0.15em;
+  font-size: 2.2em;
+}
+
+.variant{
+  overflow: auto;
+}
+.variant h3{
+  margin-bottom: 1.1em;
+}
+.variant li  {
+  float:left;
+  width: 35px;
+  height:35px;
+  padding: 3px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.variant li:first-child,
+.variant li:hover{
+  border:1px solid #000000;
+}
+.variant li:not(:first-child) {
+  margin-left: 0.1em;
+}
+.description{
+  clear:left;
+  color: rgb(0, 0, 0);
+  margin:2em 0 ;
+}
+.description h3{
+  margin-bottom:1em;
+  color: rgb(0, 0, 0);
+}
+.description ul{
+  font-size:0.8em;
+  list-style:disc;
+  margin-left: 1em;
+  color: rgb(0, 0, 0);
+}
+.description li{
+  text-indent: -0,6em;
+  margin-bottom: 0.5em;
+  color: white;
+}
+.buy-btn{
+  padding: 1.5em 3.1em;
+  border: none;
+  border-radius: 7px;
+  font-size:0.8em;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #fff;
+  background-color: #ff3f40;
+  box-shadow: 2px 2px 25px -7px #4c4c4c;
+  cursor: pointer;
+}
+
+
+
+.circular-progress {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: conic-gradient(#7d2ae8 3.6deg, #ffffff 0deg);
+  overflow: hidden; /* Asegura que el contenido no se desborde del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.hamster-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden; /* Asegura que la imagen no se desborde del contenedor circular */
+}
+
+.hamster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.progress-value {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  padding-bottom: 70%;
+  right: 35%  ;
+}
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Cambia el color de fondo para que resalte sobre la imagen */
+  opacity: 0.7; /* Ajusta la opacidad según tus preferencias */
+}
+
+
+.buy-btn:active{
+  transform: scale(0.97);
+  
+}
+@media (max-width: 767px) {
+  .cards-container {
+    margin-left: 20px; /* Ajusta el margen izquierdo para dispositivos más pequeños */
+  }
+  .product {
+    grid-template-columns: 1fr; /* Cambia a una columna para dispositivos más pequeños */
+  }
+}

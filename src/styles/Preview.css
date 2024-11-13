@@ -1,0 +1,132 @@
+/* Contenedor general */
+.cd-preview-container {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Formulario de datos del CD */
+  .cd-preview-form {
+    margin-bottom: 20px;
+  }
+  
+  .cd-preview-form h2 {
+    margin-bottom: 10px;
+  }
+  
+  .cd-preview-form label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .cd-preview-form input,
+  .cd-preview-form textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Vista previa del CD */
+  .cd-preview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cd-preview-images { 
+    display: flex; /* Usar flex para alinear en fila */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    margin-top: 20px; /* Espacio superior para separación */
+    width: 100%; /* Asegurar que ocupe el ancho completo */
+  }
+  
+  .cd-preview-section {
+    text-align: center;
+    margin: 0 10px; /* Espaciado lateral */
+    flex: 1; /* Para que cada sección ocupe el mismo espacio */
+  }
+  
+  /* Estilo para la portada */
+  .cd-preview-cover-container {
+    display: flex;
+    flex-direction: column; /* Colocar imagen y título en columna */
+    align-items: center; /* Centrar horizontalmente */
+  }
+  
+  .cd-preview-cover {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+  
+  /* Estilo para la foto interior y contratapa */
+  .cd-preview-inner,
+  .cd-preview-back {
+    width: 200px; /* Ajusta según sea necesario */
+    height: 200px; /* Ajusta según sea necesario */
+    object-fit: cover; /* Para mantener la proporción */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #ddd; /* Borde */
+    margin-top: 10px; /* Espaciado superior */
+  }
+  
+  .cd-preview-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+  }
+  
+  .cd-preview-author {
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Canciones en la contratapa */
+  .cd-preview-songs-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.9em;
+  }
+  
+  .cd-preview-songs-list li {
+    margin: 5px 0;
+  }
+  .cd-preview-back-container {
+    position: relative; /* Permite posicionar el logo sobre la imagen */
+    display: inline-block; /* Para que el contenedor tenga un tamaño ajustado a su contenido */
+  }
+  
+  .cd-preview-back {
+    width: 200px; /* Ajusta según sea necesario */
+    height: 200px; /* Ajusta según sea necesario */
+    object-fit: cover; /* Mantiene la proporción */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #ddd; /* Borde */
+  }
+  
+  .cd-preview-logo {
+    position: absolute; /* Posiciona el logo de forma absoluta */
+    top: 10px; /* Ajusta la posición vertical */
+    left: 10px; /* Ajusta la posición horizontal */
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    z-index: 1; /* Asegura que el logo esté por encima de la imagen */
+  }

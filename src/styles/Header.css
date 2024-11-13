@@ -112,7 +112,7 @@ img{
     -ms-transition: all .6s ease-in-out;
     -o-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
     box-sizing: border-box;
     
