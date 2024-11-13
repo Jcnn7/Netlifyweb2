@@ -40,6 +40,10 @@ function Cards() {
         AOS.init({
             duration: 1200,
         });
+    
+        return () => {
+            AOS.refresh(); // Clear AOS animations when the component unmounts
+        };
     }, []);
 
     const cardData = [
