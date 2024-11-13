@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #f6f1e3; /* Color que mencionaste */
+}
+
+.navbar-brand img {
+  width: 100px;
+}
+
+.navbar-nav {
+  margin-left: auto; /* Empuja las opciones del menú a la derecha */
+}
