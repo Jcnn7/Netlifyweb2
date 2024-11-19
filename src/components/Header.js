@@ -17,7 +17,7 @@ function Header() {
             <ul>
               <li><a href="http://">Productos</a></li>
               <li> <Link to="./pages/Cards.js">Nosotros</Link> </li>        
-              <li><a href="http://">Contacto</a></li>
+              <li><a href="https://www.instagram.com/urcd24?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Contacto</a></li>
             </ul>
             <div className="icon-menu">
               <button type="button"><i className="fas fa-bars"></i></button>

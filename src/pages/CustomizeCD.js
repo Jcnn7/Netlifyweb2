@@ -77,6 +77,24 @@ const CustomizeCD = () => {
     });
   };
 
+  const scrollToSearchSection = () => {
+    const section = document.querySelector('.search-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }}
+
+    const scrollToSearchResults = () => {
+      const section = document.querySelector('.search-results');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }}
+
+      const scrollToAddedSongs = () => {
+        const section = document.querySelector('.folders-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }}
+
   return (
     <div className="customize-cd" data-aos="fade-up">
       <h1 className='search-section' data-aos="fade-up" data-aos-delay="1000">Pasos A Seguir</h1>
@@ -84,25 +102,25 @@ const CustomizeCD = () => {
         <div className="step">
           <span className="step-number">1</span>
           <span>Elegi tus canciones</span>
-          <button>Buscar Canciones</button>
+          <button onClick={scrollToSearchSection}>Buscar Canciones</button>
         </div>
         <div className="arrow">›</div> {/* Flecha entre pasos */}
         <div className="step">
           <span className="step-number">2</span>
           <span>Diseña a tu gusto el disco</span>
-          <button>Canciones Agregadas</button>
+          <button onClick={scrollToSearchResults} >Canciones Agregadas</button>
         </div>
         <div className="arrow">›</div> {/* Flecha entre pasos */}
         <div className="step">
           <span className="step-number">3</span>
           <span>Elegi la Tapa, foto interna y la contratapa</span>
-          <button>Subir Fotos</button>
+          <button onClick={scrollToAddedSongs}>Subir Fotos</button>
         </div>
         <div className="arrow">›</div> {/* Flecha entre pasos */}
         <div className="step">
           <span className="step-number">4</span>
           <span>Ten una preview de tu disco!</span>
-          <button>Escuchar</button>
+          <button onClick={handlePreview}>Escuchar</button>
         </div>
       </div>
 
