@@ -7,10 +7,9 @@ import '../styles/CustomizeCD.css';
 const CustomizeCD = () => {
   const navigate = useNavigate(); // Inicializa useNavigate
   const [canciones, setCanciones] = useState([]);
-  const [fotos, setFotos] = useState([]); // Estado para las imágenes
-  const [packaging, setPackaging] = useState("Estándar");
   const [busqueda, setBusqueda] = useState('');
   const [resultados, setResultados] = useState([]);
+  const [fotos, setFotos] = useState([]); // Estado para las imágenes
 
   useEffect(() => {
     AOS.init({
@@ -21,7 +20,7 @@ const CustomizeCD = () => {
     const savedSongs = JSON.parse(localStorage.getItem('cdSongs')) || [];
     const savedImages = JSON.parse(localStorage.getItem('cdImages')) || [];
     setCanciones(savedSongs);
-    setFotos(savedImages);
+    setFotos(savedImages); // Asegúrate de cargar las imágenes guardadas
   }, []);
 
   const handleAddCancion = (cancion) => {
@@ -51,9 +50,15 @@ const CustomizeCD = () => {
   const handleAddFoto = (event) => {
     const newFoto = event.target.files[0];
     if (newFoto && newFoto instanceof File && fotos.length < 3) {
-      const updatedFotos = [...fotos, newFoto];
-      setFotos(updatedFotos);
-      localStorage.setItem('cdImages', JSON.stringify(updatedFotos)); // Guardar en local storage
+      const reader = new FileReader();
+      reader.onload = () => {
+        const base64String = reader.result;
+
+        const updatedFotos = [...fotos, base64String];
+        setFotos(updatedFotos);
+        localStorage.setItem('cdImages', JSON.stringify(updatedFotos)); // Guardar en local storage
+      };
+      reader.readAsDataURL(newFoto);
     } else if (fotos.length >= 3) {
       alert("Solo puedes subir hasta 3 fotos.");
     } else {
@@ -81,19 +86,22 @@ const CustomizeCD = () => {
     const section = document.querySelector('.search-section');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-    }}
+    }
+  };
 
-    const scrollToSearchResults = () => {
-      const section = document.querySelector('.search-results');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }}
+  const scrollToSearchResults = () => {
+    const section = document.querySelector('.search-results');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-      const scrollToAddedSongs = () => {
-        const section = document.querySelector('.folders-section');
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }}
+  const scrollToAddedSongs = () => {
+    const section = document.querySelector('.folders-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="customize-cd" data-aos="fade-up">
@@ -168,33 +176,6 @@ const CustomizeCD = () => {
           </li>
         ))}
       </ul>
-
-      {/* Sección de Fotos */}
-      <h2 className='folders-section'>Fotos o imágenes</h2>
-      <div className='folders-section'>
-        {fotos.map((foto, index) => (
-          <div key={index} className="foto-item">
-            {foto instanceof File && (
-              <img src={URL.createObjectURL(foto)} alt={`Foto ${index + 1}`} />
-            )}
-            <button onClick={() => handleRemoveFoto(index)}>Eliminar</button>
-          </div>
-        ))}
-        {fotos.length < 3 && (
-          <label className="foto-upload" htmlFor="fileInput">
-            <input
-              type="file"
-              id="fileInput"
-              accept="image/*"
-              onChange={handleAddFoto}
-              style={{ display: 'none' }}
-            />
-            <span>
-              {fotos.length === 0 ? "Cargar Portada" : fotos.length === 1 ? "Cargar Foto Interior" : "Cargar Contratapa"}
-            </span>
-          </label>
-        )}
-      </div>
 
       {/* Botón de Vista Previa */}
       <button className='preview-button' onClick={handlePreview}>Vista Previa del CD</button>
